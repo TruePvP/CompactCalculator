@@ -11,5 +11,4 @@ set /a r=%x%/%y%
 set /a x=%r% & set /p o=Operation:
 if %o% == 0 (echo Result: %r% & Pause>Nul & exit) else (set /p y=Next Number: & goto check)
 :check
-if %o% == 1 (goto Add) else (if %o% == 2 goto Sub) 
-if %o% == 3 (goto Mul) else (if %o% == 4 goto Div)
+if %o% == 1 (goto Add) else (if %o% == 2 goto Sub) & if %o% == 3 (goto Mul) else (if %o% == 4 goto Div)
